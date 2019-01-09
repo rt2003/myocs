@@ -33,11 +33,11 @@ cpan Net::SNMP Nmap::Parser Module::Install Net::CUPS Parse::EDID
 cpan Net::SSLeay IO::Socket::SSL
 sleep 5
 
-#tar xzvf Ocsinventory-Unix-Agent-2.4.2.tar.gz
-#cd "Ocsinventory-Unix-Agent-2.4.2"
-#env PERL_AUTOINSTALL=1 perl Makefile.PL
-#make
-#make install
-#perl postinst.pl --nowizard --configdir="/etc/ocsinventory-agent" --server=http://192.168.5.75/ocsinventory \
-#--ca="/etc/ocsinventory-agent/cacert.pem" \
-#--logfile="/var/log/ocs_agent.log" --tag="TPVHD1901001" --crontab
+tar xzvf Ocsinventory-Unix-Agent-2.4.2.tar.gz
+cd "Ocsinventory-Unix-Agent-2.4.2"
+PERL_AUTOINSTALL=1 perl Makefile.PL
+make
+make install
+perl postinst.pl --nowizard --configdir="/etc/ocsinventory-agent" --server=http://192.168.5.75/ocsinventory \
+--ca="/etc/ocsinventory-agent/cacert.pem" \
+--logfile="/var/log/ocs_agent.log" --tag="TPLAP1706009" --crontab --now
