@@ -1,5 +1,13 @@
 #!/bin/bash
+
+#check root permission
+if [ "$(id -u)" != "0" ]; then
+echo "This script must be run as root" 1>&2
+exit 1
+fi
+
 read -p "Please input the LABEL number[TPLAP1706009]:" TAG
+
 
 if [ -z "$TAG" ]; then
 	echo "You didn't input the LABEL. Please try again and input the LABEL!"
